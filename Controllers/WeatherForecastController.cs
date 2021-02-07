@@ -9,7 +9,6 @@ using Microsoft.Extensions.Logging;
 namespace api.Controllers
 {
     [ApiController]
-
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
@@ -25,7 +24,8 @@ namespace api.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> GetAll()
         {
-            return _weatherForecastService.GetAll();
+            var forecasts = _weatherForecastService.GetAll();
+            return forecasts;
         }
     }
 }
