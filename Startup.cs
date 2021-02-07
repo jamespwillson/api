@@ -29,6 +29,8 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
+            services.AddSingleton<IAccountService, AccountService>();
+            services.AddSingleton<IContactService, ContactService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

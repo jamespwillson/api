@@ -4,8 +4,8 @@ using api.Models;
 
 namespace api.Services.Interfaces
 {
-    public interface IAccountInterface
+    public interface IContactService
     {
-        IEnumerable<Account> GetAll();
+        IEnumerable<Contact> GetAll();
     }
 }
